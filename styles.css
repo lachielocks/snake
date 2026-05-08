@@ -1,11 +1,11 @@
 :root {
-  --bg: #050608;
-  --card: #0f1014;
-  --card-soft: #151821;
-  --text: #f7f7f7;
-  --muted: #8d94a3;
-  --line: #252935;
-  --accent: #ef6a2f;
+  --bg: #060b07;
+  --card: #101713;
+  --card-soft: #15201a;
+  --text: #f0fff3;
+  --muted: #91a298;
+  --line: #25352b;
+  --accent: #67d262;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top, #121420 0%, var(--bg) 56%);
+  background: radial-gradient(circle at top, #152119 0%, var(--bg) 56%);
   animation: app-fade-in 260ms ease-out;
 }
 
@@ -40,7 +40,7 @@ body {
   font-size: 3rem;
   line-height: 1;
   color: var(--accent);
-  text-shadow: 0 0 26px #ef6a2f44;
+  text-shadow: 0 0 26px #67d26244;
 }
 
 .brand p {
@@ -137,8 +137,8 @@ body {
 
 .dropdown-trigger:hover,
 .chip:hover {
-  border-color: #3a404f;
-  background: #1a1f2b;
+  border-color: #3d5244;
+  background: #1a2820;
 }
 
 .dropdown-trigger:active,
@@ -159,7 +159,7 @@ body {
   position: absolute;
   z-index: 4;
   width: 100%;
-  background: #11141d;
+  background: #121c16;
   border: 1px solid var(--line);
   border-radius: 10px;
   opacity: 0;
@@ -201,7 +201,7 @@ body {
 }
 
 .dropdown-menu button:hover {
-  background: #1f2430;
+  background: #1f3025;
 }
 
 .chip {

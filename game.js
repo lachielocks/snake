@@ -22,12 +22,12 @@ const DIR = {
 };
 
 const THEME = {
-  boardA: "#141821",
-  boardB: "#171c26",
+  boardA: "#16221a",
+  boardB: "#1a2820",
   snakeHead: "#67d262",
   snakeBody: "#85de81",
-  food: "#ef6a2f",
-  obstacle: "#6b7280",
+  food: "#e5483f",
+  obstacle: "#708676",
 };
 
 let snake = [];
@@ -243,6 +243,15 @@ function renderSnake(progress) {
   ctx.beginPath();
   ctx.arc(head.x, head.y, TILE_SIZE * 0.33, 0, Math.PI * 2);
   ctx.fill();
+
+  const eyeOffsetX = TILE_SIZE * 0.1;
+  const eyeOffsetY = TILE_SIZE * 0.08;
+  const eyeRadius = TILE_SIZE * 0.045;
+  ctx.fillStyle = "#0b0f0c";
+  ctx.beginPath();
+  ctx.arc(head.x - eyeOffsetX, head.y - eyeOffsetY, eyeRadius, 0, Math.PI * 2);
+  ctx.arc(head.x + eyeOffsetX, head.y - eyeOffsetY, eyeRadius, 0, Math.PI * 2);
+  ctx.fill();
 }
 
 function renderFood(time) {
@@ -258,7 +267,8 @@ function renderFood(time) {
   ctx.beginPath();
   ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
   ctx.fill();
-  ctx.fillStyle = "#ffb08d";
+
+  ctx.fillStyle = "#ff9a93";
   ctx.beginPath();
   ctx.arc(centerX - radius * 0.35, centerY - radius * 0.35, radius * 0.25, 0, Math.PI * 2);
   ctx.fill();
