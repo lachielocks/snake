@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Snake</h1>
+          <p>Eat apples. Avoid collisions.</p>
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <span>SCORE</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>BEST</span>
+            <strong id="best-score">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="game-shell">
+        <div class="toolbar">
+          <div class="dropdown-wrap">
+            <span>Layout</span>
+            <div class="dropdown" data-dropdown="layout">
+              <button class="dropdown-trigger" data-trigger type="button">Classic</button>
+              <ul class="dropdown-menu" data-menu>
+                <li><button type="button" data-value="classic">Classic</button></li>
+                <li><button type="button" data-value="walls">Walls</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown-wrap">
+            <span>Speed</span>
+            <div class="dropdown" data-dropdown="speed">
+              <button class="dropdown-trigger" data-trigger type="button">Normal</button>
+              <ul class="dropdown-menu" data-menu>
+                <li><button type="button" data-value="300">Slow</button></li>
+                <li><button type="button" data-value="200">Normal</button></li>
+                <li><button type="button" data-value="120">Fast</button></li>
+              </ul>
+            </div>
+          </div>
+          <button id="new-game-btn" class="chip">New Game</button>
+          <button id="pause-btn" class="chip">Pause</button>
+        </div>
+
+        <p id="status" class="status">Press an arrow key to start.</p>
+        <canvas id="board" width="560" height="560" aria-label="Snake board"></canvas>
+
+        <div class="mobile-controls" aria-hidden="true">
+          <button class="touch-btn" data-dir="up">▲</button>
+          <div class="touch-row">
+            <button class="touch-btn" data-dir="left">◀</button>
+            <button class="touch-btn" data-dir="down">▼</button>
+            <button class="touch-btn" data-dir="right">▶</button>
+          </div>
+        </div>
+
+        <p class="hint">Use arrows / WASD · Space pause · R restart</p>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
